@@ -1,0 +1,7 @@
+#!/bin/bash
+
+timeout 4000 /home/anvuong/miniconda3/envs/tf14/bin/python run.py --datadir /mnt/i/dataset-processed --algorithm hals --accelerated --update-func gillis --L 480 --alpha 0.5 --eps 0.1 --max-iter $1 --outputdir ./HALS_Accel_L480 --use-sample
+timeout 4000 /home/anvuong/miniconda3/envs/tf14/bin/python run.py --datadir /mnt/i/dataset-processed --algorithm hals --accelerated --update-func gillis --L 720 --alpha 0.5 --eps 0.1 --max-iter $1 --outputdir ./HALS_Accel_L720 --use-sample
+timeout 4000 /home/anvuong/miniconda3/envs/tf14/bin/python run.py --datadir /mnt/i/dataset-processed --algorithm hals --accelerated --update-func gillis --L 960 --alpha 0.5 --eps 0.1 --max-iter $1 --outputdir ./HALS_Accel_L960 --use-sample
+timeout 4000 /home/anvuong/miniconda3/envs/tf14/bin/python run.py --datadir /mnt/i/dataset-processed --algorithm hals --accelerated --update-func gillis --L 1320 --alpha 0.5 --eps 0.1 --max-iter $1 --outputdir ./HALS_Accel_L1320 --use-sample
+timeout 4000 /home/anvuong/miniconda3/envs/tf14/bin/python run.py --datadir /mnt/i/dataset-processed --algorithm hals --accelerated --update-func gillis --L 1680 --alpha 0.5 --eps 0.1 --max-iter $1 --outputdir ./HALS_Accel_L1680 --use-sample
