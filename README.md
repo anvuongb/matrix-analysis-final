@@ -1,4 +1,4 @@
-This repo contains codes needed for NMF based on MU and HALS
+This repo contains codes needed for NMF based on MU and HALS. It implements algorithms from the paper https://arxiv.org/abs/1107.5194
 
 ## NMF
 Two NMF algorithms are implemented in ```nmf.py```, if ```alpha=0```, they reduce to non-accelerated versions.
