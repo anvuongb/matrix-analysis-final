@@ -68,7 +68,7 @@ optional arguments:
 ## Samples
 Commands to run can be found in ```script_all.sh```, e.g. to perform NMF with L=30 using accelerated HALS for 100 iterations:
 ```bash
-python run.py --datadir /mnt/i/dataset-processed --algorithm hals --accelerated --update-func gillis --L 60 --alpha 0.5 --eps 0.1 --max-iter 100 --outputdir ./HALS_Accel_L60 --use-sample
+python run.py --datadir /mnt/i/dataset-processed --algorithm hals --accelerated --update-func gillis --L 60 --alpha 0.5 --eps 0.1 --max-iter 100 --outputdir ./HALS_Accel_L60
 ```
 
 ## Figures
