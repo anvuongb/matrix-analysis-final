@@ -1,5 +1,9 @@
 This repo contains codes needed for NMF based on MU and HALS. It implements algorithms from the paper https://arxiv.org/abs/1107.5194
 
+This codes require numpy, cv2 and matplotlib for NMF and plots part. 
+
+Deep learning models require tensorflow, tritonclient, protobuf. These packages are not needed for ```run.py```.
+
 ## NMF
 Two NMF algorithms are implemented in ```nmf.py```, if ```alpha=0```, they reduce to non-accelerated versions.
 ```python
