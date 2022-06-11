@@ -4,7 +4,7 @@ import time
 from IPython.display import clear_output
 
 def accelerated_MU(X, L, alpha, epsillon, max_iter, save_every_iter=-1, save_with_index=False, save_cb=None, weight_path="", restart=False):
-    """
+    '''
     X: input matrix X (MxN)
     L: low rank, decompose X=WH where W (MxL) and H (LxN)
     alpha: control parameter for inner loop
@@ -14,7 +14,7 @@ def accelerated_MU(X, L, alpha, epsillon, max_iter, save_every_iter=-1, save_wit
     save_cb: save function callback
     weight_path: directory to save to or load from
     restart: if true, use weight_path to init W, H
-    """
+    '''
     print(f"Start MU with L={L}, alpha={alpha}, epsillon={epsillon}, max_iter={max_iter}")
     P = X.shape[0]*X.shape[1]
     M = X.shape[0]
@@ -89,7 +89,7 @@ def accelerated_MU(X, L, alpha, epsillon, max_iter, save_every_iter=-1, save_wit
     return W, H, norm_error, e_time 
 
 def accelerated_HALS(X, L, alpha, epsillon, max_iter, update_func="gillis", save_every_iter=-1, save_with_index=False, save_cb=None, weight_path="", restart=False):
-    """
+    '''
     X: input matrix X (MxN)
     L: low rank, decompose X=WH where W (MxL) and H (LxN)
     alpha: control parameter for inner loop
@@ -102,7 +102,7 @@ def accelerated_HALS(X, L, alpha, epsillon, max_iter, update_func="gillis", save
     save_cb: save function callback
     weight_path: directory to save to or load from
     restart: if true, use weight_path to init W, H
-    """
+    '''
     print(f"Start HALS with L={L}, alpha={alpha}, epsillon={epsillon}, max_iter={max_iter}, update_func={update_func}")
     def update_once(F, A, B, L):
         indices = range(L)
