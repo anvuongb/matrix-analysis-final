@@ -1,10 +1,20 @@
-This contains codes needed for NMF based on MU and HALS
+This repo contains codes needed for NMF based on MU and HALS
+
+## NMF
+Two NMF algorithms are implemented in ```nmf.py```, if ```alpha=0```, they reduce to non-accelerated versions.
+```python
+# Accelerated Multiplicative Update
+accelerated_MU(X, L, alpha, epsillon, max_iter, update_func="gillis", save_every_iter=-1, save_with_index=False, save_cb=None, weight_path="", restart=False)
+```
+```python
+# Accelerated Hierarchical ALS
+accelerated_HALS(X, L, alpha, epsillon, max_iter, update_func="gillis", save_every_iter=-1, save_with_index=False, save_cb=None, weight_path="", restart=False)
+```
 
 ## Results
 
 ![Facial components from HALS, L=30](HALS_Accel_L30/NMF_components.png)
 ![Reconstructed faces from HALS, L=30](HALS_Accel_L30/Sample_reconstruction.png)
-
 
 ## Main function
 Main codes contained in ```run.py```. 
