@@ -12,7 +12,8 @@ def accelerated_MU(X, L, alpha, epsillon, max_iter, save_every_iter=-1, save_wit
     max_iter: number of iterations for algorithm
     save_every_iter: save weight every # iterations
     save_cb: save function callback
-    weight_path
+    weight_path: directory to save to or load from
+    restart: if true, use weight_path to init W, H
     """
     print(f"Start MU with L={L}, alpha={alpha}, epsillon={epsillon}, max_iter={max_iter}")
     P = X.shape[0]*X.shape[1]
@@ -99,7 +100,8 @@ def accelerated_HALS(X, L, alpha, epsillon, max_iter, update_func="gillis", save
                  "gillis" adapts the procedure from Gillis Matlab, with sligh modifications in indices
     save_every_iter: save weight every # iterations
     save_cb: save function callback
-    weight_path
+    weight_path: directory to save to or load from
+    restart: if true, use weight_path to init W, H
     """
     print(f"Start HALS with L={L}, alpha={alpha}, epsillon={epsillon}, max_iter={max_iter}, update_func={update_func}")
     def update_once(F, A, B, L):
